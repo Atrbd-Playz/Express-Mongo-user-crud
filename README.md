@@ -23,3 +23,14 @@ This project demonstrates basic **CRUD (Create, Read, Update, Delete)** operatio
 
 ---
 
+## 📂 Project Structure  
+```bash
+.
+├── src/
+│   ├── models/        # Mongoose schemas
+│   ├── routes/        # Express routes
+│   ├── controllers/   # Logic for CRUD operations
+│   └── app.js         # Main server file
+├── .env               # Environment variables (DB URI, PORT)
+├── package.json
+└── README.md
