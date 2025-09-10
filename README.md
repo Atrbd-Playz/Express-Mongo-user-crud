@@ -92,7 +92,7 @@ git push origin feature/YourFeature
 
 ---  
 ## 📜 License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](https://mit-license.org/) for more information.
 
 ## ⭐ Acknowledgements  
 [Express.js](https://expressjs.com/)  
