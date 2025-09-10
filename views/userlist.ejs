@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Creation | Backend Project 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-zinc-800 w-[100%] sm:overflow-x-hidden overflow-x-hidden">
+    <div class="main w-full m-6">
+        <div class=" flex flex-col p-8  text-gray-50">
+            <a href="/" class="text-xl text-blue-500 ml-4 p-2 tracking-tight inline-block w-1/12 ">Home</a>
+            <h1 class="text-4xl m-4 mb-6 tracking-tight">All User List</h1>
+            <div class="flex flex-wrap w-full">
+                <div class="w-[100vw] h-[2px] bg-zinc-700 ml-[-43px]"></div>
+
+                <% if (users.length > 0) { %>
+                    <% users.forEach(function(users) {%>
+                        <div class="w-[17rem] p-5 bg-zinc-700 rounded-lg m-3 mt-5 ">
+                            <div class="image w-full h-52 rounded-lg bg-zinc-600">
+                                <img class="w-full h-52 rounded-lg object-top object-cover" src="<%= `${users.image} `%>" alt=""
+                                    srcset="">
+                            </div>
+                            <h3 class="my-4 text-xl tracking-tighter">
+                                <%= `${users.name} `%>
+                            </h3>
+                            <h3 class="text-zinc-300">
+                                <%= `${users.email} `%>
+                            </h3>
+                            <div class="buttons mt-7 flex justify-between">
+                                <a href="/edit/<%=users._id%>" class="text-zinc-400 w-1/4 h-1/4 max-sm:text-sm cursor-pointer">Edit</a>
+                                <a href="/delete/<%= `${users._id} `%>"
+                                    class="text-red-400 w-1/4 h-1/4 max-sm:text-sm cursor-pointer">Delete</a>
+                            </div>
+                        </div>
+
+                        <%})%>
+                            <% } else{%>
+
+                                <h3 class="ml-6 mt-7 text-zinc-400">No User Found.</h3>
+                                <% }%>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

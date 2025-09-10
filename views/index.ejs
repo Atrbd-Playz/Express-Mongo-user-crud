@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Creation | Backend Project 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-zinc-800 w-full overflow-x-hidden">
+    <div class="main w-full m-6">
+        <div class="form flex flex-col p-8 text-gray-50">
+            <a href="/userlist" class="text-xl text-blue-500 ml-4 p-2 tracking-tight w-1/12">User List</a>
+            <h1 class="text-4xl m-4 mb-6">Create User</h1>
+
+            <form action="/create" method="post" class="flex flex-row flex-wrap gap-3 flex-4">
+
+                <input required class="w-1/4 text-white bg-zinc-700 p-3 m-4 h-1/5 rounded-lg outline-none" type="text" placeholder="Name" name="name">
+
+                <input required class="w-1/4 text-white bg-zinc-700 p-3 m-4 h-1/5 rounded-lg outline-none" type="email" placeholder="Email" name="email">
+
+                <input required class="w-1/4 text-white bg-zinc-700 p-3 m-4 h-1/5 rounded-lg outline-none" type="url" placeholder="Image URL" name="image">
+
+                <input type="submit" class="bg-sky-600 px-1 py-2 w-1/4 h-1/4 m-4 max-sm:text-sm cursor-pointer rounded-md" value="Create User">
+
+            </form>
+        </div>
+</body>
+</html>

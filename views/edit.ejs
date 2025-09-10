@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Creation | Backend Project 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+<body class="bg-zinc-800 w-full overflow-x-hidden">
+    <div class="main w-full m-6">
+        <div class="flex flex-col p-8 text-gray-50">
+            <div class="flex ">
+                <a href="/" class="text-xl text-blue-500 ml-3 p-2 tracking-tight inline-block w-1/12 ">Home</a>
+                <a href="/userlist" class="text-xl text-blue-500 ml-4 p-2 tracking-tight w-1/12 inline-block">User List</a>
+            </div>
+            
+            <h1 class="text-4xl m-4 mb-6">Edit Profile</h1>
+            <div class="w-[100vw] h-[2px] bg-zinc-700 ml-[-43px]"></div>
+
+            <div class="flex justify-between flex-wrap">
+                <form action="/updated/<%= user._id %>" method="post" class="flex flex-col  gap-3 flex-4 w-1/2 mt-[5.5rem]" >
+
+                    <input  class="w-3/4 text-white bg-zinc-700 p-3 m-4 h-14 rounded-lg outline-none" type="text" placeholder="Change Name" name="name" value="<%=`${user.name}`  %>" >
+    
+                    <input  class="w-3/4 text-white bg-zinc-700 p-3 m-4 h-14 rounded-lg outline-none" type="email" placeholder="Change Email" name="email" value="<%=`${user.email}`  %>">
+    
+                    <input  class="w-3/4 text-white bg-zinc-700 p-3 m-4 h-14 rounded-lg outline-none" type="url" placeholder="Change Profile Picture" name="image" value="<%=`${user.image}`  %>">
+    
+                    <input type="submit" class="bg-orange-600 font-medium px-1 py-1 w-1/4 h-12 m-4 max-sm:text-sm cursor-pointer rounded-md" value="Update User">
+    
+                </form>
+
+                <div>
+                    <h3 class="p-5 pl-1 m-3 mt-5 mb-0 text-zinc-400">Current Profile:</h3>
+                    <div class="w-[17rem] p-5 bg-zinc-700 rounded-lg m-3 ">
+                        <div class="image w-full h-52 rounded-lg bg-zinc-600">
+                            <img class="w-full h-52 rounded-lg object-top object-cover" src="<%= `${user.image} `%>" alt=""
+                                srcset="">
+                        </div>
+                        <h3 class="my-4 text-xl tracking-tighter">
+                            <%= `${user.name} `%>
+                        </h3>
+                        <h3 class="text-zinc-300">
+                            <%= `${user.email} `%>
+                        </h3>
+                        
+                    </div>
+                </div>
+    
+                
+            </div>
+
+            
+        </div>
+</body>
+</html>
